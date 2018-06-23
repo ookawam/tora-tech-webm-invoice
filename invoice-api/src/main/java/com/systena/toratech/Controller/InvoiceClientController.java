@@ -32,7 +32,7 @@ public class InvoiceClientController {
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE)
-    public int insertInvoice(@RequestBody InsertInvoiceEntity insertInvoiceEntity) {
+    public ResponseEntity<ResponseInvoice> insertInvoice(@RequestBody InsertInvoiceEntity insertInvoiceEntity) {
         return invoiceClientService.insertInvoice(insertInvoiceEntity);
     }
 

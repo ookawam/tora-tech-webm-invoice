@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.systena.toratech.Dao.InvoiceClientDao;
 import com.systena.toratech.Entity.InsertInvoiceEntity;
 import com.systena.toratech.Entity.InvoiceErrorEntity;
+import com.systena.toratech.Entity.InvoiceLastInsertEntity;
 import com.systena.toratech.Response.ResponseInvoice;
 
 @Service
@@ -44,7 +45,11 @@ public class InvoiceClientService {
         return new ResponseEntity<ResponseInvoice>(res, HttpStatus.OK);
     }
 
-    public int insertInvoice(InsertInvoiceEntity insertInvoiceEntity){
-        return invoiceClientDao.insertInvoice(insertInvoiceEntity);
+    public ResponseEntity<ResponseInvoice> insertInvoice(InsertInvoiceEntity insertInvoiceEntity){
+    	ResponseInvoice res = new ResponseInvoice();
+    	invoiceClientDao.insertInvoice(insertInvoiceEntity);
+    	InvoiceLastInsertEntity lastInsertEntity = invoiceClientDao.selectLastInsert();
+    	res.setInvoiceResultList(invoiceClientDao.selectInvoiceClientFind(lastInsertEntity.getLastInsertId()));
+    	return new ResponseEntity<ResponseInvoice>(res, HttpStatus.OK);
     }
 }

@@ -9,6 +9,7 @@ import org.seasar.doma.boot.ConfigAutowireable;
 
 import com.systena.toratech.Entity.InsertInvoiceEntity;
 import com.systena.toratech.Entity.InvoiceClientEntity;
+import com.systena.toratech.Entity.InvoiceLastInsertEntity;
 
 @Dao
 @ConfigAutowireable
@@ -22,4 +23,6 @@ public interface InvoiceClientDao {
     @Insert(sqlFile = true)
     int insertInvoice(InsertInvoiceEntity insertInvoiceEntity);
 
+    @Select
+    InvoiceLastInsertEntity selectLastInsert();
 }
