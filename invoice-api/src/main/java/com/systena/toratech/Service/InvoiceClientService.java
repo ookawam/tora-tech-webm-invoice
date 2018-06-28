@@ -34,8 +34,8 @@ public class InvoiceClientService {
         if(invoice == 0) {
             InvoiceErrorEntity errorEntity = new InvoiceErrorEntity();
             errorEntity.setErrorCode("40003");
-            errorEntity.setErrorMessage("0以外を指定してください。");
-            errorEntity.setErrorDetail("0以外を指定してください。");
+            errorEntity.setErrorMessage("Please specify a value other than 0");
+            errorEntity.setErrorDetail("Please specify a value other than 0");
             errorList.add(errorEntity);
             res.setInvoiceErrorList(errorList);
             return new ResponseEntity<ResponseInvoice>(res, HttpStatus.BAD_REQUEST);
