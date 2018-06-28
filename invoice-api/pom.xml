@@ -117,8 +117,7 @@
 			                <goal>process</goal>
 			            </goals>
 			            <configuration>
-			                <outputDirectory>src/main/resources/META-INF/com/systena/toratech/Dao/InvoiceClientDao</outputDirectory>
-			                <processor>org.seasar.doma.boot.ConfigAutowireable</processor>
+			                <outputDirectory>src/main/java/META-INF/com/systena/toratech/Dao/InvoiceClientDao</outputDirectory>
 			            </configuration>
 			        </execution>
 			    </executions>
