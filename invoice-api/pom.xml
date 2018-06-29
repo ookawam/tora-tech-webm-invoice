@@ -108,6 +108,8 @@
                 <version>2.21.0</version>
             </plugin>
 		</plugins>
+		<outputDirectory>${project.build.directory}/classes</outputDirectory>
+        <testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
 		  <resources>
 		    <resource>
 		      <directory>${project.basedir}/src/main/resources</directory>
