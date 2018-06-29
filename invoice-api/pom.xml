@@ -5,6 +5,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>invoice-api</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>invoice-api</name>
@@ -56,6 +57,11 @@
             <groupId>org.skyscreamer</groupId>
             <artifactId>jsonassert</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+             <groupId>com.h2database</groupId>
+             <artifactId>h2</artifactId>
+             <scope>test</scope>
         </dependency>
 	</dependencies>
 
