@@ -112,7 +112,8 @@
         <testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
 		  <resources>
 		    <resource>
-		      <directory>${project.basedir}/src/main/resources</directory>
+
+		      <directory>${project.basedir}/src/main</directory>
 		    </resource>
 		  </resources>
 		  <testResources>
