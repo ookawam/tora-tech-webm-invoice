@@ -117,7 +117,9 @@
         <testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
 		  <resources>
 		    <resource>
-
+              <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
+		    <resource>
 		      <directory>${project.basedir}/src/main/java</directory>
 		    </resource>
 		  </resources>
